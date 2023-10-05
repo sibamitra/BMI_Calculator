@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="input-container">
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="Height">
+            <div class="dropdown">
+                <select id="heightUnit">
+                    <option value="cm">Centimeter</option>
+                    <option value="m">Meter</option>
+                    <option value="ft">Feet</option>
+                    <option value="in">Inch</option>
+                </select>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" placeholder="Weight">
+            <div class="dropdown">
+                <select id="weightUnit">
+                    <option value="kg">Kilogram</option>
+                    <option value="g">Gram</option>
+                    <option value="lbs">Pound</option>
+                    <option value="oz">oz</option>
+                </select>
+            </div>
+        </div>
+        <button onclick="calculateBMI()">Calculate</button>
+        <button onclick="resetValues()">Reset</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function resetValues() {
+            document.getElementById('height').value = '';
+            document.getElementById('weight').value = '';
+            document.getElementById('heightUnit').value = 'cm';
+            document.getElementById('weightUnit').value = 'kg';
+            document.getElementById('result').textContent = '';
+        }
+    </script>
+</body>
+
+</html>
